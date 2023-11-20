@@ -6,7 +6,7 @@ import PeopleRatingIcon from '../images/stats-card_icon-3.png';
 
 function StatsSection() {
   return (
-    <section className="stats" id="stats">
+    <section className="stats container" id="stats">
       <ul className="stats-list">
         <li>
           <a href="#" className="stats-card">

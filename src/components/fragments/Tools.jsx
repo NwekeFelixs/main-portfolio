@@ -31,7 +31,7 @@ function Tools() {
       ];
 
   return (
-    <section className="skills" id="skills">
+    <section className="skills container" id="skills">
     <div className="skills-content section-content">
       <p className="section-subtitle">My tools</p>
       <h2 className="h3 section-title">What are  the tools I use?</h2>

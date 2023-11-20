@@ -4,7 +4,7 @@ import { IoLocationOutline, IoCallOutline, IoMailOutline, IoPersonCircle, IoMail
 
 function Contact() {
   return (
-    <section className="contact" id="contact" style={{padding:'10px'}}>
+    <section className="contact container" id="contact" style={{padding:'20px'}}>
       <div className="contact-content section-content">
         <p className="section-subtitle">Contact</p>
         <h2 className="h3 section-title">Have You Any Project? Please Drop a Message</h2>
@@ -40,13 +40,13 @@ function Contact() {
           </li>
           <li>
             <ul className="contact-social-list">
-              <li>
+              <li style={{marginBottom: '10px'}}>
                 <a href="#" className="contact-social-link">
                   <div className="tooltip">Facebook</div>
                   <IoLogoFacebook />
                 </a>
               </li>
-              <li>
+              <li style={{marginBottom: '10px'}}>
                 <a href="#" className="contact-social-link">
                   <div className="tooltip">Twitter</div>
                   <IoLogoTwitter/>

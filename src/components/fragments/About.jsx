@@ -4,7 +4,7 @@ import AboutBannerImage from '../images/about-banner.png';
 
 function AboutSection() {
   return (
-    <section className="about" id="about">
+    <section className="about container" id="about">
       <figure className="about-banner">
         <img src={AboutBannerImage} alt="A man in an alice blue shirt with a thinking expression" className="w-100" />
       </figure>

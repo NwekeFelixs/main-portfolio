@@ -10,7 +10,7 @@ import projectImage7 from '../images/project-7.png';
 
 function Portfolio() {
   return (
-    <section className="project" id="portfolio">
+    <section className="project container" id="portfolio">
       <ul className="project-list">
         <li>
           <div className="project-content section-content">
@@ -23,7 +23,7 @@ function Portfolio() {
         </li>
 
         <li>
-          <a href="#" className="project-card">
+          <a href="https://filmlane-mauve.vercel.app" className="project-card">
             <figure className="card-banner">
               <img src={projectImage1} className="w-100" alt="A macintosh on a yellow background." />
             </figure>
@@ -35,7 +35,7 @@ function Portfolio() {
         </li>
 
         <li>
-          <a href="#" className="project-card">
+          <a href="https://resturant-pi.vercel.app" className="project-card">
             <figure className="card-banner">
               <img src={projectImage2} className="w-100" alt="On a Blue background, a Wacom and a mouse." />
             </figure>
@@ -47,7 +47,7 @@ function Portfolio() {
         </li>
 
         <li>
-          <a href="#" className="project-card">
+          <a href="https://homeverse-pi.vercel.app" className="project-card">
             <figure className="card-banner">
               <img src={projectImage3} className="w-100" alt="A Cassette tape on a mellow apricot background." />
             </figure>
@@ -59,7 +59,7 @@ function Portfolio() {
         </li>
 
         <li>
-          <a href="#" className="project-card">
+          <a href="https://anon-eta.vercel.app" className="project-card">
             <figure className="card-banner">
               <img src={projectImage4} className="w-100" alt="Blue digital watch on a dark liver background." />
             </figure>
@@ -71,7 +71,7 @@ function Portfolio() {
         </li>
 
         <li>
-          <a href="#" className="project-card">
+          <a href="https://blogy-beta.vercel.app" className="project-card">
             <figure className="card-banner">
               <img src={projectImage5} className="w-100" alt="On a dark liver background, Airport luggage car carrying a luggage." />
             </figure>

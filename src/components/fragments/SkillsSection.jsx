@@ -29,7 +29,7 @@ function SkillsSection() {
 
 
   return (
-    <section className="skills" id="skills">
+    <section className="skills container" id="skills">
       <div className="skills-content section-content">
         <p className="section-subtitle">My skills</p>
         <h2 className="h3 section-title">What My Programming Skills Included?</h2>
