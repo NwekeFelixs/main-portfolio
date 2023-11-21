@@ -95,7 +95,7 @@ function Portfolio() {
         </li>
 
         <li>
-          <a href="#" className="project-card">
+          <a href="https://crafti-lemon.vercel.app/" className="project-card">
             <figure className="card-banner">
               <img src={projectImage7} className="w-100" alt="A fujifilm instant camera on a dark electric blue background." />
             </figure>
@@ -104,10 +104,6 @@ function Portfolio() {
               <time className="publish-date" datetime="2022-04">April 2022</time>
             </div>
           </a>
-        </li>
-
-        <li>
-          <button className="load-more">Load more work</button>
         </li>
       </ul>
     </section>

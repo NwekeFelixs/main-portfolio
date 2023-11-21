@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/style.css';
 import AboutBannerImage from '../images/about-banner.png';
+import cv from '../../components/Resume.pdf';
 
 function AboutSection() {
   return (
@@ -20,7 +21,7 @@ function AboutSection() {
 
         <div className="btn-group">
           <button className="btn btn-secondary">Hire me</button>
-          <button className="btn btn-primary">Download cv</button>
+          <a href={cv} download='my cv' className="btn btn-primary">Download cv</a>
         </div>
       </div>
     </section>

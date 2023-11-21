@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/style.css';
-import { IoLocationOutline, IoCallOutline, IoMailOutline, IoPersonCircle, IoMail, IoCall, IoChatbubbles, IoLogoFacebook, IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io5';
+import { IoLocationOutline, IoCallOutline, IoMailOutline, IoPersonCircle, IoMail, IoCall, IoChatbubbles, IoLogoFacebook, IoLogoTwitter, IoLogoLinkedin, IoLogoGithub } from 'react-icons/io5';
 
 function Contact() {
   return (
@@ -41,19 +41,19 @@ function Contact() {
           <li>
             <ul className="contact-social-list">
               <li style={{marginBottom: '10px'}}>
-                <a href="#" className="contact-social-link">
-                  <div className="tooltip">Facebook</div>
-                  <IoLogoFacebook />
+                <a href="https://github.com/NwekeFelixs" className="contact-social-link">
+                  <div className="tooltip">Github</div>
+                  <IoLogoGithub />
                 </a>
               </li>
               <li style={{marginBottom: '10px'}}>
-                <a href="#" className="contact-social-link">
+                <a href="https://x.com/Feylicks1?t=eUknlccySkCIY25Peht78Q&s=09" className="contact-social-link">
                   <div className="tooltip">Twitter</div>
                   <IoLogoTwitter/>
                 </a>
               </li>
               <li>
-                <a href="#" className="contact-social-link">
+                <a href="https://www.linkedin.com/in/felix-nweke-a88951282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andriod_app" className="contact-social-link">
                   <div className="tooltip">Linkedin</div>
                   <IoLogoLinkedin/>
                 </a>
