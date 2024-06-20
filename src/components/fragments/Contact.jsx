@@ -16,7 +16,7 @@ function Contact() {
             </div>
             <div className="wrapper">
               <h3 className="h4 contact-item-title">Address:</h3>
-              <address className="contact-info">Aba, Abia State, Nigeria</address>
+              <address className="contact-info">Portharcourt, Rivers State, Nigeria</address>
             </div>
           </li>
           <li className="contact-list-item">
