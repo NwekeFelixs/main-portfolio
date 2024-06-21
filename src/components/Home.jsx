@@ -9,7 +9,7 @@ import Tools from './fragments/Tools';
 import Portfolio from './fragments/Portfolio';
 import Contact from './fragments/Contact';
 import Footer from './fragments/Footer';
-import GoToTop from './fragments/GoToTop';
+
 
 function Home() {
   return (
@@ -27,7 +27,6 @@ function Home() {
           </article>
        </main>
        <Footer/>
-       <GoToTop/>
     </div>
   )
 }
