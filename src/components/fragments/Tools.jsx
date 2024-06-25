@@ -13,6 +13,7 @@ import clickupLogo from '../images/clickup.png';
 import slackLogo from '../images/slack.png';
 import photoshopLogo from '../images/photoshop.png';
 import adobeXdLogo from '../images/adobe-xd.png';
+import fireBaseLogo from '../images/firebase.png';
 
 function Tools() {
     const tools = [
@@ -28,6 +29,7 @@ function Tools() {
         { id: 10, name: 'Slack', logo: slackLogo },
         { id: 11, name: 'Photoshop', logo: photoshopLogo },
         { id: 12, name: 'Adobe XD', logo: adobeXdLogo },
+        { id: 13, name: 'Fire Base', logo: fireBaseLogo },
       ];
 
   return (
