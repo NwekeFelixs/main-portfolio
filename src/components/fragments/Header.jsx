@@ -90,7 +90,6 @@ function Header() {
           <a href="#">Fey<span>Licks</span></a>
         </h1>
         <div className="navbar-actions">
-          <label htmlFor="lang" className="sr-only">Select Language:</label>
           <select name="language" id="lang" onChange={handleLanguageChange}>
             <option value="en">English</option>
             <option value="ar">Arabic</option>
