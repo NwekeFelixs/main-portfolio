@@ -76,10 +76,12 @@ function Header() {
     const googleFrame = document.querySelector('iframe.goog-te-menu-frame');
     if (googleFrame) {
       const googleFrameDocument = googleFrame.contentDocument || googleFrame.contentWindow.document;
-      const googleMenu = googleFrameDocument.querySelector('.goog-te-menu2-item span.text:contains("' + language + '")');
-      if (googleMenu) {
-        googleMenu.click();
-      }
+      const googleMenuItems = googleFrameDocument.querySelectorAll('.goog-te-menu2-item span.text');
+      googleMenuItems.forEach((menuItem) => {
+        if (menuItem.innerText.includes(language)) {
+          menuItem.click();
+        }
+      });
     }
   };
 
@@ -91,8 +93,8 @@ function Header() {
         </h1>
         <div className="navbar-actions">
           <select name="language" id="lang" onChange={handleLanguageChange}>
-            <option value="en">English</option>
-            <option value="ar">Arabic</option>
+            <option value="en">En</option>
+            <option value="ar">Ar</option>
           </select>
           <button
             className="theme-btn"
