@@ -10,6 +10,7 @@ import jqueryLogo from '../images/jquery.png';
 import bootstrapLogo from '../images/bootstrap.png';
 import reactLogo from '../images/react.png';
 import sassLogo from '../images/sass.png';
+import angularLogo from '../images/angular.png';
 
 
 
@@ -24,6 +25,7 @@ function SkillsSection() {
     { id: 6, name: 'Bootstrap', logo: bootstrapLogo },
     { id: 7, name: 'React', logo: reactLogo },
     { id: 8, name: 'SASS', logo: sassLogo },
+    { id: 8, name: 'Angular', logo: angularLogo },
   ];
 
 
