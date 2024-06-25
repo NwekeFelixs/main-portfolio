@@ -7,21 +7,48 @@ function Header() {
   const [isLightTheme, setLightTheme] = useState(false);
 
   useEffect(() => {
-    // Add scroll event listener
     const handleScroll = () => {
       setHeaderActive(window.scrollY >= 10);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
+  useEffect(() => {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'light_theme') {
+      setLightTheme(true);
+      document.body.classList.add('light_theme');
+    } else {
+      setLightTheme(false);
+      document.body.classList.add('dark_theme');
+    }
+  }, []);
+
+  useEffect(() => {
+    const googleTranslateElementInit = () => {
+      new window.google.translate.TranslateElement(
+        { pageLanguage: 'en', includedLanguages: 'en,ar', layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE },
+        'google_translate_element'
+      );
+    };
+    if (window.google && window.google.translate) {
+      googleTranslateElementInit();
+    } else {
+      const script = document.createElement('script');
+      script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      script.async = true;
+      script.onload = googleTranslateElementInit;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   const toggleElement = (elem) => {
-    elem.classList.toggle("active");
+    elem.classList.toggle('active');
   };
 
   const handleNavToggleClick = () => {
@@ -30,32 +57,31 @@ function Header() {
   };
 
   const handleThemeToggleClick = () => {
-    setLightTheme(!isLightTheme);
+    const newTheme = !isLightTheme;
+    setLightTheme(newTheme);
 
-    // Query the button element with the data-theme-btn attribute
-    const themeToggleBtn = document.querySelector("[data-theme-btn]");
-
+    const themeToggleBtn = document.querySelector('[data-theme-btn]');
     if (themeToggleBtn) {
       toggleElement(themeToggleBtn);
 
-      const theme = isLightTheme ? "light_theme" : "dark_theme";
-      document.body.classList.toggle("light_theme", isLightTheme);
-      document.body.classList.toggle("dark_theme", !isLightTheme);
-      localStorage.setItem("theme", theme);
+      const theme = newTheme ? 'light_theme' : 'dark_theme';
+      document.body.classList.toggle('light_theme', newTheme);
+      document.body.classList.toggle('dark_theme', !newTheme);
+      localStorage.setItem('theme', theme);
     }
   };
 
-  useEffect(() => {
-    // Check and apply the last selected theme from localStorage
-    const theme = localStorage.getItem("theme");
-    if (theme === "light_theme") {
-      setLightTheme(true);
-      document.body.classList.add("light_theme");
-    } else {
-      setLightTheme(false);
-      document.body.classList.add("dark_theme");
+  const handleLanguageChange = (event) => {
+    const language = event.target.value;
+    const googleFrame = document.querySelector('iframe.goog-te-menu-frame');
+    if (googleFrame) {
+      const googleFrameDocument = googleFrame.contentDocument || googleFrame.contentWindow.document;
+      const googleMenu = googleFrameDocument.querySelector('.goog-te-menu2-item span.text:contains("' + language + '")');
+      if (googleMenu) {
+        googleMenu.click();
+      }
     }
-  }, []);
+  };
 
   return (
     <header className={`header ${isHeaderActive ? 'active' : ''}`} data-header>
@@ -64,9 +90,10 @@ function Header() {
           <a href="#">Fey<span>Licks</span></a>
         </h1>
         <div className="navbar-actions">
-          <select name="language" id="lang">
-            <option value="en">En</option>
-            <option value="ar">Ar</option>
+          <label htmlFor="lang" className="sr-only">Select Language:</label>
+          <select name="language" id="lang" onChange={handleLanguageChange}>
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
           </select>
           <button
             className="theme-btn"
@@ -91,23 +118,14 @@ function Header() {
         </button>
         <nav className={`navbar ${isNavToggleActive ? 'active' : ''}`} data-navbar>
           <ul className="navbar-list">
-            <li>
-              <a href="#home" className="navbar-link">Home.</a>
-            </li>
-            <li>
-              <a href='#about' className="navbar-link">About.</a>
-            </li>
-            <li>
-              <a href ='#skills' className="navbar-link">Skills.</a>
-            </li>
-            <li>
-              <a href="#portfolio" className="navbar-link">Portfolio.</a>
-            </li>
-            <li>
-              <a href="#contact" className="navbar-link">Contact.</a>
-            </li>
+            <li><a href="#home" className="navbar-link">Home</a></li>
+            <li><a href="#about" className="navbar-link">About</a></li>
+            <li><a href="#skills" className="navbar-link">Skills</a></li>
+            <li><a href="#portfolio" className="navbar-link">Portfolio</a></li>
+            <li><a href="#contact" className="navbar-link">Contact</a></li>
           </ul>
         </nav>
+        <div id="google_translate_element" style={{ display: 'none' }}></div>
       </div>
     </header>
   );
