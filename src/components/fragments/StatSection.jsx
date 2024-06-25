@@ -14,7 +14,7 @@ function StatsSection() {
               <img src={BadgeIcon} alt="Badge icon" />
             </div>
             <h2 className="h2 card-title">
-              3+ <strong>Years of Experience</strong>
+              4+ <strong>Years of Experience</strong>
             </h2>
             <ion-icon name="chevron-forward-outline"></ion-icon>
           </a>
